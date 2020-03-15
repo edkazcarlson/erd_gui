@@ -19,6 +19,7 @@ SOURCES += \
     Canvas.cpp \
     Editor.cpp \
     MainWindow.cpp \
+    SQLType.cpp \
     Table.cpp \
     TableAttribute.cpp \
     main.cpp
@@ -27,6 +28,7 @@ HEADERS += \
     Canvas.h \
     Editor.h \
     MainWindow.h \
+    SQLType.h \
     Table.h \
     TableAttribute.h \
     main.h
