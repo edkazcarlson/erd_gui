@@ -1,17 +1,42 @@
 #include "SQLType.h"
+#include <QGraphicsPathItem>
+
+const std::unordered_map<std::string, int> SQLType::PLSQLTypes
+{{"char", 1}, {"nchar", 1}, {"nvarchar2", 1}, {"varchar2", 1},{"long", 0}, {"raw", 0}, {"long raw", 0}, {"number", 2},
+    {"numeric", 2}, {"flat", 0}, {"dec", 2}, {"decimal", 2}, {"integer", 0}, {"int", 0}, {"smallint", 0}, {"real", 0},
+    {"double precision", 0}, {"date", 0}, {"timestamp", 0}, {"interval year", 0}, {"interval day", 0}, {"bfile", 0},
+    {"blob", 0}, {"clob", 0}, {"nclob", 0}, {"rowid", 0}, {"urowid", 1}};
+
 
 SQLType::SQLType()
 {
-/*TODO
- *Make set of Qstrings that contain all the SQL types for PLSQL (add others later)
- * Make a decorator for single sized, make another for double sized
- * when the user changes the type make it so that it checks the new type against lists of
- * single or double sized ones then decide whether to add the decorator
- */
 
- /* Default no size has all the types and a draw/toString method that can be used in order to put it on the
-  * TableAttribute that everyone can call
-  *
-  * For FKS,make it end-user responsiblity for now
-  */
+}
+
+
+QString SQLType::toString(){
+
+}
+
+
+
+sizedSQLType::sizedSQLType()
+{
+
+}
+
+QString sizedSQLType::toString()
+{
+
+}
+
+short sizedSQLType::getSizeAttributes() const
+{
+    return sizeAttributes;
+}
+
+
+void sizedSQLType::setSizeAttributes(short value)
+{
+    sizeAttributes = value;
 }

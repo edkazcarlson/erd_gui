@@ -1,4 +1,4 @@
-#ifndef TABLEATTRIBUTES_H
+#ifndef TABLEATTRIBUTE_H
 #define TABLEATTRIBUTES_H
 #include <QtGlobal>
 #include <QGraphicsPathItem>
@@ -7,10 +7,10 @@ enum sqlTypes{
 
 };
 
-class TableAttribute
+class TableAttributeController
 {
 public:
-    TableAttribute();
+    TableAttributeController();
 
     void draw();
 

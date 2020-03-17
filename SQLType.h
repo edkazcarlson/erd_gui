@@ -2,19 +2,26 @@
 #define SQLTYPE_H
 
 #include <QtGlobal>
+#include <unordered_map>
 
 class SQLType{
 public:
     SQLType();
     QString toString();
+    const static std::unordered_map <std::string, int> PLSQLTypes;
 };
+
+
 
 class sizedSQLType : public SQLType{
 public:
     sizedSQLType();
-    short sizeAttributes;
     QString toString();
+    short getSizeAttributes() const;
+    void setSizeAttributes(short value);
+
 private:
+    short sizeAttributes;
 };
 
 

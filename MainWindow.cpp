@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
     createMenus();
 
     m_scene = new QGraphicsScene();
-    m_view = new Canvas(m_scene, this,0,0,0);
+    m_view = new Canvas(m_scene, this,100,0,0);
     setCentralWidget(m_view);
 
     m_editor = new Editor(this);
