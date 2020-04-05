@@ -26,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     Canvas.h \
+    CustomTypes.h \
     Editor.h \
     MainWindow.h \
     SQLType.h \

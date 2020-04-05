@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QGraphicsScene>
+#include "Canvas.h"
 
 class Table;
 
@@ -20,7 +21,7 @@ public:
 private:
     QGraphicsItem* itemAt(const QPointF& point);
 
-    void showBlockMenu(const QPoint& point, Table* block);
+    void showCanvasMenu(const QPoint& point);
 
 private:
     QGraphicsScene* m_scene;

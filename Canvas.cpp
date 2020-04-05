@@ -1,10 +1,12 @@
 #include "Canvas.h"
 #include <QPainter>
 #include <iostream>
+#include <QDebug>
 using namespace std;
 
 Canvas::Canvas(QGraphicsScene* scene, QWidget* parent, int r, int g, int b):
     QGraphicsView(scene, parent){
+    qInfo() << "made canvas";
     setRenderHint(QPainter::Antialiasing, true);
     red = r;
     green = g;

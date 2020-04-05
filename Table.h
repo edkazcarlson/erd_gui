@@ -4,7 +4,7 @@
 #include <QGraphicsPathItem>
 #include "TableAttribute.h"
 
-class Table//: public QGraphicsPathItem
+class Table: public QGraphicsPathItem
 {
 public:
     Table();
@@ -14,7 +14,7 @@ private:
     qint32 m_width;
     qint32 m_height;
     QString name;
-    QVector<TableAttributeController> attributeLabels;
+    QVector<TableAttribute> attributeLabels;
 };
 
 #endif // TABLE_H

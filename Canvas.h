@@ -3,6 +3,8 @@
 
 #include <QGraphicsView>
 #include <QtWidgets>
+#include "CustomTypes.h"
+#include <QDebug>
 
 class Canvas : public QGraphicsView
 {
@@ -13,6 +15,8 @@ public:
     ~Canvas();
     void drawBackground(QPainter* painter, const QRectF& rect);
     void wheelEvent(QWheelEvent *event);
+    int type() const { qInfo() << "type called";
+        return canvasEnum; }
 private:
     int red;
     int green;

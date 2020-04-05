@@ -7,10 +7,10 @@ enum sqlTypes{
 
 };
 
-class TableAttributeController
+class TableAttribute
 {
 public:
-    TableAttributeController();
+    TableAttribute();
 
     void draw();
 

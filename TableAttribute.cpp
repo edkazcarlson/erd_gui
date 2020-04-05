@@ -1,6 +1,6 @@
 #include "TableAttribute.h"
 
-TableAttributeController::TableAttributeController()
+TableAttribute::TableAttribute()
 {
 
 }
