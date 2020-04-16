@@ -5,8 +5,8 @@
 #include "SQLType.h"
 #include <iostream>
 using namespace std;
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
+    qInfo() << argc;
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

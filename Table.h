@@ -7,7 +7,8 @@
 class Table: public QGraphicsPathItem
 {
 public:
-    Table();
+    Table(QGraphicsItem* parent);
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget);
 
 
 private:

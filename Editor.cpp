@@ -31,16 +31,10 @@ bool Editor::eventFilter(QObject* object, QEvent* event){
                 }
                 case Qt::RightButton:{
                     qInfo() << "Right button clicked";
-                    QGraphicsItem* item = itemAt(mouseEvent->scenePos());
+                    QGraphicsItem* item = itemAt(mouseEvent->screenPos());
                     qInfo() << mouseEvent->scenePos();
-                    if (!item)
-                        break;
-
-                    const QPoint menuPosition = mouseEvent->screenPos();
-
-                    if (item->type() == canvasEnum)
-                    {
-                        showCanvasMenu(menuPosition);
+                    if (!item){ //hit the canvas
+                        showCanvasMenu(mouseEvent->screenPos());
                     }
 
                     break;
@@ -61,14 +55,15 @@ void Editor::showCanvasMenu(const QPoint& point)
     QAction* newTable = menu.addAction("New Table");
 
     QAction* selection = menu.exec(point);
-    if (selection == newTable)
-    {
-        Table* newTable = new Table();
+    if (selection == newTable){
+        qInfo() << "selected new table";
+        Table* newTable = new Table(NULL);
         m_scene->addItem(newTable);
+        newTable->setPos(point);
     }
 }
 
-QGraphicsItem* Editor::itemAt(const QPointF& point)
+QGraphicsItem* Editor::itemAt(const QPoint& point)
 {
     qInfo() << "reached item at";
     Q_ASSERT(m_scene);

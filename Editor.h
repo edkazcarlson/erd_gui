@@ -19,7 +19,7 @@ public:
     void load(QDataStream& stream);
 
 private:
-    QGraphicsItem* itemAt(const QPointF& point);
+    QGraphicsItem* itemAt(const QPoint& point);
 
     void showCanvasMenu(const QPoint& point);
 
